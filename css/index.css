@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+:root{
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white-p: hsla(0, 0%, 100%, 0.75);
+    /* (background, headings, buttons) */
+  --Very-light-gray : hsl(0, 0%, 95%);
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; 
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body{
+  /* 700 */
+  width: 100vw;
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-family: 'Lexend Deca', sans-serif;
+}
+.cards{
+  color: var(--Transparent-white-p);
+  border-radius: 0.8rem;
+  margin-block: 4rem;
+  overflow: hidden;
+}
+.cards .card{
+  max-width: 32rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3rem;
+  padding:4.5rem;
+  background-color: var(--Bright-orange);
+}
+.cards .card.luxury{
+  background-color: var(--Very-dark-cyan);
+}
+.cards .card.suvs{
+  background-color: var(--Dark-cyan);
+}
+.cards .card img{
+  width:50px;
+}
+.cards .card .title{
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+  color: var(--Very-light-gray);
+}
+.cards .card .paragraph{
+  line-height: 2.5rem;
+}
+.cards .card .cta{
+  display: inline-block;
+  width: 60%;
+  font-weight: 600;
+  padding: 1.2rem 2rem;
+  border: 2px solid transparent;
+  border-radius: 2.5rem;
+  background-color: var(--Very-light-gray);
+  color: var(--Bright-orange);
+  cursor: pointer;
+  transition: all .2s ease;
+}
+.card .cta.cta-l{
+  color: var(--Very-dark-cyan);
+}
+.card .cta.cta-s{
+  color: var(--Dark-cyan);
+}
+.cards .card .cta:hover{
+  background-color: transparent;
+  color: var(--Very-light-gray);
+  border-color:var(--Very-light-gray);
+}
+@media screen and (min-width:1024px) {
+  body{
+    height: 100vh;
+  }
+  .cards{
+    display: flex;
+  }
+  .cards .card .cta{
+    margin-top: 8rem;
+  }
+}
